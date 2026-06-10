@@ -1,0 +1,30 @@
+name: Droid Auto Review
+
+on:
+  issue_comment:
+    types: [created]
+
+concurrency:
+  group: "${{ github.workflow }}-${{ github.event.issue.number || github.ref }}"
+  cancel-in-progress: false
+
+jobs:
+  droid-review:
+    if: github.event.issue.pull_request != null && contains(github.event.comment.body, '@droid')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      id-token: write
+      actions: read
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: SquareDiff/droid-action-sqdf@candidate/optimizer-3379cef4-baseline-skill
+        with:
+          factory_api_key: ${{ secrets.FACTORY_API_KEY }}
+          review_depth: deep
+          review_model: gpt-5.2
+          reasoning_effort: high
