@@ -22,7 +22,7 @@ jobs:
       - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - uses: SquareDiff/droid-action-sqdf@candidate/optimizer-0916b82f-expand-bug-pattern-coverage-with-state-mutation-
+      - uses: SquareDiff/droid-action-sqdf@candidate/optimizer-3379cef4-baseline-skill
         with:
           factory_api_key: ${{ secrets.FACTORY_API_KEY }}
           review_depth: deep
