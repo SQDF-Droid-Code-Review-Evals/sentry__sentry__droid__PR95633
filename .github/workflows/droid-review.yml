@@ -22,7 +22,7 @@ jobs:
       - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - uses: SquareDiff/droid-action-sqdf@candidate/optimizer-4b9d6170-harden-pass-2-validation-with-mandatory-evidence
+      - uses: SquareDiff/droid-action-sqdf@candidate/optimizer-1e90f724-add-mandatory-context-expansion-step-requiring-c
         with:
           factory_api_key: ${{ secrets.FACTORY_API_KEY }}
           eval_harness_mode: true
