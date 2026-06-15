@@ -22,9 +22,10 @@ jobs:
       - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - uses: SquareDiff/droid-action-sqdf@candidate/optimizer-3379cef4-baseline-skill
+      - uses: SquareDiff/droid-action-sqdf@candidate/optimizer-5c4bfcf0-baseline-skill
         with:
           factory_api_key: ${{ secrets.FACTORY_API_KEY }}
+          eval_harness_mode: true
           review_depth: deep
           review_model: gpt-5.2
           reasoning_effort: high
