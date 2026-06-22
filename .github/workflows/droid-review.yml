@@ -22,7 +22,7 @@ jobs:
       - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - uses: SquareDiff/droid-action-sqdf@candidate/optimizer-1453bc38-add-atomic-state-transition-and-runtime-contract
+      - uses: SquareDiff/droid-action-sqdf@candidate/optimizer-5d7477f2-add-boundary-validation-and-semantic-value-shape
         with:
           factory_api_key: ${{ secrets.FACTORY_API_KEY }}
           eval_harness_mode: true
