@@ -22,7 +22,7 @@ jobs:
       - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - uses: SquareDiff/droid-action-sqdf@candidate/optimizer-1cc1da6d-pure-bug-dense-persistence-rule
+      - uses: SquareDiff/droid-action-sqdf@candidate/optimizer-c0128023-clean-minimal-parent-ablation
         with:
           factory_api_key: ${{ secrets.FACTORY_API_KEY }}
           eval_harness_mode: true
